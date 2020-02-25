@@ -1,5 +1,11 @@
 module.exports = {
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
+  ],
   root: true,
+  plugins: ['react', 'react-hooks', 'prettier'],
   settings: {
     react: {
       version: 'detect',
@@ -13,12 +19,6 @@ module.exports = {
       jsx: true,
       experimentalObjectRestSpread: true,
     },
-    plugins: ['react', 'prettier'],
-    extends: [
-      'eslint:recommended',
-      'plugin:react/recommended',
-      'plugin:prettier/recommended',
-    ],
   },
   env: {
     es6: true,
@@ -32,5 +32,7 @@ module.exports = {
     'react/no-render-return-value': 'off',
     semi: ['error', 'never'],
     quotes: ['error', 'single'],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
   },
 }
