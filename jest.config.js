@@ -24,7 +24,7 @@ module.exports = {
   // collectCoverageFrom: undefined,
 
   // The directory where Jest should output its coverage files
-  coverageDirectory: "coverage",
+  coverageDirectory: 'coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
@@ -69,14 +69,15 @@ module.exports = {
   // ],
 
   // An array of file extensions your modules use
-   moduleFileExtensions: ['js', 'json', 'jsx', 'node'],
+  moduleFileExtensions: ['js', 'json', 'jsx', 'node'],
 
   // A map from regular expressions to module names that allow to stub out resources with a single module
-   moduleNameMapper: {
-     '^react-native$': 'react-native-web',
-     "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-      '\\.(s?css|less|styl)$': 'identity-obj-proxy'
-   },
+  moduleNameMapper: {
+    '^react-native$': 'react-native-web',
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+      '<rootDir>/__mocks__/fileMock.js',
+    '\\.(s?css|less|styl)$': 'identity-obj-proxy'
+  },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
@@ -129,7 +130,7 @@ module.exports = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: "jest-environment-jsdom",
+  testEnvironment: 'jest-environment-jsdom',
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -164,9 +165,9 @@ module.exports = {
   // timers: "real",
 
   // A map from regular expressions to paths to transformers
-   transform: {
-    '^.+\\.(js|jsx)?$': 'babel-jest'
-   },
+  transform: {
+    '^.+\\.(js|jsx)?$': 'babel-jest',
+  },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [

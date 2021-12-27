@@ -18,12 +18,13 @@ module.exports = {
       'react-dom': '@hot-loader/react-dom'
     }*/
   },
-  devtool: 'source-map', // more info:https://webpack.js.org/guides/production/#source-mapping and https://webpack.js.org/configuration/devtool/
-  entry: path.resolve(__dirname, 'src/index'),
+  // devtool: 'source-map', // more info:https://webpack.js.org/guides/production/#source-mapping and https://webpack.js.org/configuration/devtool/
+  entry: path.resolve(process.cwd(), 'src/index'),
   target: 'web',
   mode: 'production',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    clean: true,
+    path: path.resolve(process.cwd(), 'dist'),
     publicPath: '/',
     filename: '[name].[contenthash:8].js'
   },
@@ -130,10 +131,12 @@ module.exports = {
           }, {
             loader: 'postcss-loader',
             options: {
-              plugins: () => [
-                require('cssnano'),
-                require('autoprefixer'),
-              ],
+              postcssOptions: {
+                plugins: () => [
+                  require('cssnano'),
+                  require('autoprefixer'),
+                ],
+              },
               sourceMap: true
             }
           }, {

@@ -16,18 +16,17 @@ module.exports = {
     host: 'localhost',
     port: port,
     historyApiFallback: true,
-    hot: true,
     open: true,
   },
-  devtool: 'cheap-module-eval-source-map', // more info:https://webpack.js.org/guides/development/#using-source-maps and https://webpack.js.org/configuration/devtool/
+  devtool: 'eval-cheap-module-source-map', // more info:https://webpack.js.org/guides/development/#using-source-maps and https://webpack.js.org/configuration/devtool/
   entry: [
     // must be first entry to properly set public path
-    path.resolve(__dirname, 'src/index.js') // Defining path seems necessary for this to work consistently on Windows machines.
+    path.resolve(process.cwd(), 'src/index.js') // Defining path seems necessary for this to work consistently on Windows machines.
   ],
   target: 'web',
   mode: 'development',
   output: {
-    path: path.resolve(__dirname, 'dist'), // Note: Physical files are only output by the production build task `npm run build`.
+    path: path.resolve(process.cwd(), 'dist'), // Note: Physical files are only output by the production build task `npm run build`.
     publicPath: '/',
     filename: 'bundle.js'
   },
@@ -101,9 +100,11 @@ module.exports = {
           }, {
             loader: 'postcss-loader',
             options: {
-              plugins: () => [
-                require('autoprefixer')
-              ]
+              postcssOptions: {
+                plugins: () => [
+                  require('autoprefixer')
+                ]
+              }
             }
           }, {
             loader: 'stylus-loader'
