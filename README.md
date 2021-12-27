@@ -1,6 +1,6 @@
 # React App boilerplate
 
-Sample boilerplate with react 16, webpack 5, babel, hmr, jest, eslint, prettier
+Sample boilerplate with react 17, webpack 5, babel, hmr, jest, eslint, prettier
 
 ### How to use
 
