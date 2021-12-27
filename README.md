@@ -1,16 +1,19 @@
 # React App boilerplate
-Sample biolerplate with react 16, webpack 4, babel, hmr, jest, eslint, prettier
+
+Sample boilerplate with react 16, webpack 5, babel, hmr, jest, eslint, prettier
 
 ### How to use
+
 ```
   git clone git@github.com:seballos/react-app-boilerplate.git
   cd react-app-boilerplate
   # run dev server
-  yarn dev
+  npm start
   # build bundle
-  yarn build
+  npm build
 ```
 
 ### Contribute
+
 - Open an issue
 - Create a PR
